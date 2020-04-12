@@ -1,0 +1,43 @@
+{
+    "coord": {
+        "lon": 123.89,
+        "lat": 10.32
+    },
+    "weather": [
+        {
+            "id": 801,
+            "main": "Clouds",
+            "description": "few clouds",
+            "icon": "02n"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 302.15,
+        "feels_like": 305.27,
+        "temp_min": 302.15,
+        "temp_max": 302.15,
+        "pressure": 1011,
+        "humidity": 62
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 1.5,
+        "deg": 90
+    },
+    "clouds": {
+        "all": 20
+    },
+    "dt": 1586696400,
+    "sys": {
+        "type": 1,
+        "id": 8187,
+        "country": "PH",
+        "sunrise": 1586640910,
+        "sunset": 1586685289
+    },
+    "timezone": 28800,
+    "id": 1717512,
+    "name": "Cebu City",
+    "cod": 200
+}

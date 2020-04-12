@@ -1,0 +1,5 @@
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+API_KEY = 4e56cde1cd27dcfc063be510ee66e249
+ENVIRONMENT_NAME = Debug
