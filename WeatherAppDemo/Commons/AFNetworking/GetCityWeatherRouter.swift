@@ -1,6 +1,5 @@
 import Foundation
 import Alamofire
-import AlamofireActivityLogger
 
 enum GetCityWeatherRouter: URLRequestConvertible {
     static let baseURLPath = "http://api.openweathermap.org"

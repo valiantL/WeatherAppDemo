@@ -14,14 +14,6 @@ public extension DataResponse {
         }
         return [ : ]
     }
-
-    func networkingErrorOccurred() -> Bool {
-        if self.result.error is BackendError, case .network(let backendError) = self.result.error as! BackendError {
-            debugPrint("Backend error occurred: \(backendError)")
-            return true
-        }
-        return false
-    }
 }
 
 
