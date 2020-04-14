@@ -12,14 +12,16 @@ class CityListViewController: UIViewController {
 
     let searchController = UISearchController(searchResultsController: nil)
 
-    var viewModel: CityListViewModel!
+    var viewModel: CityListViewModel! {
+        didSet {
+            viewModel.cities = viewModel.getCities()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-
-        viewModel.cities = viewModel.getCities()
 
         searchController.searchResultsUpdater = self
 
@@ -50,13 +52,6 @@ class CityListViewController: UIViewController {
         }
         if let indexPath = tableView.indexPathForSelectedRow {
             tableView.deselectRow(at: indexPath, animated: true)
-        }
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        if #available(iOS 11.0, *) {
-            navigationItem.hidesSearchBarWhenScrolling = true
         }
     }
     
