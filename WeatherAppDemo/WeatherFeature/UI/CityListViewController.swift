@@ -12,14 +12,16 @@ class CityListViewController: UIViewController {
 
     let searchController = UISearchController(searchResultsController: nil)
 
-    var viewModel: CityListViewModel!
+    var viewModel: CityListViewModel! {
+        didSet {
+            viewModel.cities = viewModel.getCities()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-
-        viewModel.cities = viewModel.getCities()
 
         searchController.searchResultsUpdater = self
 

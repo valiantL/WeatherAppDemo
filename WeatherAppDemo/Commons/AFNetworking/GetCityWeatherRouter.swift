@@ -27,7 +27,8 @@ enum GetCityWeatherRouter: URLRequestConvertible {
     var parameters: [String: Any]? {
         switch self {
         case .getCityWeather(let cityId, let appId):
-            return ["id": cityId, "appid": appId]
+            let param = GetCityWeatherParameter(cityId: cityId, appId: appId)
+            return param.toJSON()
         case .getWeatherIcon:
             return nil
         }
@@ -43,5 +44,22 @@ enum GetCityWeatherRouter: URLRequestConvertible {
         urlRequest.httpMethod = self.method.rawValue
         urlRequest.timeoutInterval = TimeInterval(5 * 1000)
         return try URLEncoding.default.encode(urlRequest, with: parameters)
+    }
+}
+
+struct GetCityWeatherParameter {
+    private var cityId: Int
+    private var appId: String
+    
+    public init(cityId: Int, appId: String) {
+        self.cityId = cityId
+        self.appId = appId
+    }
+    
+    public func toJSON() -> Parameters {
+        var parameters: Parameters = [:]
+        parameters["id"] = cityId
+        parameters["appid"] = appId
+        return parameters
     }
 }
