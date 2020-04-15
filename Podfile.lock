@@ -2,19 +2,16 @@ PODS:
   - Alamofire (4.7.0)
   - AlamofireActivityLogger (2.4.0):
     - Alamofire (~> 4.5)
-  - Kingfisher (4.0.1)
   - SwiftLint (0.39.1)
 
 DEPENDENCIES:
   - Alamofire (= 4.7)
   - AlamofireActivityLogger (from `https://github.com/ManueGE/AlamofireActivityLogger.git`, tag `2.4.0`)
-  - Kingfisher (= 4.0.1)
   - SwiftLint (= 0.39.1)
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - Kingfisher
     - SwiftLint
 
 EXTERNAL SOURCES:
@@ -30,9 +27,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
   AlamofireActivityLogger: e4724e82c2aa7a8ada84a496bc481c4670cff4a9
-  Kingfisher: b771785e9461ed4b8686d40e7145f9e58100cb24
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
 
-PODFILE CHECKSUM: 9fd05d7907b50b43291cda249b8cf1344eaa07f9
+PODFILE CHECKSUM: 215a45ec01774e38ab9a868388cdb1ccb28c7038
 
 COCOAPODS: 1.9.1

@@ -7,7 +7,6 @@ def utilities_pods
   pod 'SwiftLint', '0.39.1'
   pod 'AlamofireActivityLogger' , :git => 'https://github.com/ManueGE/AlamofireActivityLogger.git', :tag => '2.4.0'
   pod 'Alamofire', '4.7'
-  pod 'Kingfisher', '4.0.1'
 end
 
 target 'WeatherAppDemo' do

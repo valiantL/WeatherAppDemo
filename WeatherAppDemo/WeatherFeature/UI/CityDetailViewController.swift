@@ -1,5 +1,4 @@
 import UIKit
-import Kingfisher
 
 class CityDetailViewController: UIViewController {
     
@@ -31,7 +30,8 @@ class CityDetailViewController: UIViewController {
         currentWeatherLabel.text = weather.weather?.first?.description
         guard let iconCodeStr = weather.weather?.first?.icon else { return }
         let iconURL = try! self.viewModel?.loadWeatherIcon(codeStr: iconCodeStr)
-        weatherImageView.kf.setImage(with: iconURL)
+//        weatherImageView.kf.setImage(with: iconURL)
+        weatherImageView.loadURL(url: iconURL)
         print("demo1 iconURL: \(iconURL?.absoluteString)")
     }
     
